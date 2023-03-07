@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Header.js';
+import useFetch from './useFetch';
+import ImgWrapper from './ImgWrapper';
 
 function App() {
+
+  const { data, loading, error } = useFetch('https://api.quotable.io/random?tags=motivational');
+
+  if(loading) return <h2>loading...</h2>
+  if(error) console.log(error);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="App App-header">
+        <Header />
+        <ImgWrapper/>
+        <h2>Quote:</h2>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {data?.content}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 }
