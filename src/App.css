@@ -1,16 +1,9 @@
 .App {
   text-align: center;
-  background: rgb(251, 230, 63);
-  background: radial-gradient(
-    circle,
-    rgba(251, 230, 63, 1) 0%,
-    rgba(252, 70, 107, 1) 98%
-  );
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -27,18 +20,27 @@
     transform: rotate(360deg);
   }
 }
-
-.pup-img {
+.img-wrapper {
   height: 300px;
+  width: 90vw;
+  object-fit: cover;
+  overflow: hidden;
 }
-header {
+.pup-img {
+  max-height: 100%;
+}
+.banner {
   margin-top: 20px;
   display: flex;
   gap: 20px;
   align-items: center;
+  justify-content: center;
 }
 .logo {
   height: 70px;
+}
+h2 {
+  font-size: 10px;
 }
 .main {
   max-width: 90%;
@@ -46,6 +48,19 @@ header {
 h5 {
   margin: 10px;
 }
-footer p {
+footer {
   font-size: 10px;
+  margin-top: 60px;
+}
+footer a {
+  color: rgb(190 38 69);
+}
+button {
+  border: none;
+  background-color: #fc5a67;
+  color: white;
+  font-weight: bold;
+  padding: 6px;
+  margin: 10px;
+  font-family: inherit;
 }
