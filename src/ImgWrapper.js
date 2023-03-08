@@ -1,5 +1,5 @@
 import React from 'react';
-import pupsArray from './PupperImages';
+import pupsArray from './PupperImages.js';
 
 const randomNumber = Math.floor(Math.random() * 23);
 const randomPuppy = pupsArray[randomNumber];
