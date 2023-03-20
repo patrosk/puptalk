@@ -1,7 +1,7 @@
 import React from 'react';
 import pupsArray from './PupperImages.js';
 
-const randomNumber = Math.floor(Math.random() * 23);
+const randomNumber = Math.floor(Math.random() * pupsArray.length);
 const randomPuppy = pupsArray[randomNumber];
 
 export default function ImgWrapper() {

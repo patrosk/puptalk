@@ -4,10 +4,12 @@ import useFetch from './useFetch.js';
 import Button from './Button.js';
 import ImgWrapper from './ImgWrapper.js';
 import Footer from './Footer.js';
+import pupsArray from './PupperImgs';
 
 function Home() {
 
     const { data, loading, error } = useFetch('https://api.quotable.io/random?tags=motivational');
+    console.log(pupsArray);
 
     return (
       <div className="App">
