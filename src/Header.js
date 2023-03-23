@@ -1,5 +1,5 @@
 import React from 'react';
-import img from './img/love.png';
+import img from './love.png';
 
 export default function Header() {
     return(
